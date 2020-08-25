@@ -3,11 +3,8 @@ from tkinter import *
 from writetoCvs import *
 
 from tkinter import *
-from PIL import ImageTk, Image
 import mysql.connector as mariadb
 import csv 
-from tkinter import ttk
-
 
 # Write to CSV Excel Function
 '''def write_to_csv(result):

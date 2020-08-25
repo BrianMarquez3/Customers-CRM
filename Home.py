@@ -5,7 +5,7 @@
 
 from db.db import *
 from listCustomer import *
-from writetoCvs import *
+from addCustomer import *
 
 from tkinter import *
 from PIL import ImageTk, Image
@@ -93,14 +93,14 @@ dicount_code_label = Label(root, text="Discount Code").grid(row=12, column=0)
 price_paid_label = Label(root, text="Price Paid").grid(row=13, column=0)
 
 # Submit customer To Database
-def add_customer():
+'''def add_customer():
     sql_command = "INSERT INTO customers(first_name, last_name, address_1, address_2, city, state, zipcade, country, phone, email, payment_method, dicount_code, price_paid) Values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     values = (first_name_box.get(), last_name_box.get(), address_1_box.get() ,address_2_box.get(), city_box.get(), state_box.get(), zipcade_box.get(), country_box.get(), phone_box.get(), email_box.get(), payment_method_box.get(), dicount_code_box.get(), price_paid_box.get())
     my_cursor.execute(sql_command, values)
 
     mydb.commit()
     clear_fields()
-
+'''
 # Write to CSV Excel Function
 '''def write_to_csv(result):
     with open('customers.csv', 'a') as f:
