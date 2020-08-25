@@ -4,9 +4,12 @@
 # Export Excel
 
 from db.db import *
+from listCustomer import *
+from writetoCvs import *
+
 from tkinter import *
 from PIL import ImageTk, Image
-#import mysql.connector as mariadb
+import mysql.connector as mariadb
 import csv 
 from tkinter import ttk
 
@@ -99,12 +102,12 @@ def add_customer():
     clear_fields()
 
 # Write to CSV Excel Function
-def write_to_csv(result):
+'''def write_to_csv(result):
     with open('customers.csv', 'a') as f:
         w = csv.writer(f, dialect='excel')
         for record in result:
             w.writerow(record)
-
+'''
 # List Customers
 def search_customer():
     search_customers=Tk()
@@ -298,7 +301,7 @@ def search_customer():
 
 
 # List Customers
-def list_customer():
+'''def list_customer():
     list_customer_query =Tk()
     list_customer_query.title("List All Customers")
     list_customer_query.iconbitmap('icons/db.ico')
@@ -317,7 +320,7 @@ def list_customer():
 
     csv_button = Button(list_customer_query, text="Save to Excel", command = lambda: write_to_csv(result))
     csv_button.grid(row=index+1, column=0)
-
+'''
 #create label
 title_label = Label (root, text="MariaDb customer database", font=("Helvetica", 16))
 title_label.grid(row=0, column=0, columnspan=2, pady="10")

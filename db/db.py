@@ -7,4 +7,3 @@ mydb = mariadb.connect(
     password="briandb",
     database = "cmd",
 )
-
