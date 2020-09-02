@@ -351,6 +351,9 @@ list_customer_button.grid(row=15, column=0, sticky=W, padx=10)
 search_customers_button = Button(root, text="Save/Edit Customers", command = search_customer)
 search_customers_button.grid(row=15, column=1, sticky=W, padx=10)
 
+Imagen=PhotoImage(file="images/Customers2.png")
+Imagen_2 =Label(root, image=Imagen)
+Imagen_2.place(x=330, y=30)
 
 
 root.mainloop()
