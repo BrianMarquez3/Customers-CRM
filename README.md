@@ -1,5 +1,5 @@
 
-<h2 align="center">Python Course - Learn Python &nbsp;:heart:&nbsp;</h2>
+<h2 align="center">Customers - CMR - Basic &nbsp;👨‍💻&nbsp;</h2>
 
 <p align="center">
   
