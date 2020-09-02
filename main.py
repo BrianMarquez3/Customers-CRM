@@ -17,7 +17,6 @@ root.title('Customers CRM')
 root.iconbitmap('icons/db.ico')
 root.geometry("1000x600") 
 
-
 #Check to see if connection to MYSQL was created
 print(mydb)
 
@@ -62,6 +61,7 @@ my_cursor.execute("CREATE TABLE IF NOT EXISTS customers (first_name VARCHAR(255)
 
 # Create Function Clear_fileds / clear text fileds
 def clear_fields():
+    
     first_name_box.delete(0, END)
     last_name_box.delete(0, END)
     address_1_box.delete(0, END)
@@ -75,7 +75,7 @@ def clear_fields():
     payment_method_box.delete(0, END)
     dicount_code_box.delete(0, END)
     price_paid_box.delete(0, END)
-
+    
 # create Main to Enter customer Data
 first_name_label = Label(root, text="First Name").grid(row=1, column=0)
 last_name_label = Label(root, text="Last Name").grid(row=2, column=0)
@@ -100,13 +100,6 @@ def add_customer():
     mydb.commit()
     clear_fields()
 
-# Write to CSV Excel Function
-'''def write_to_csv(result):
-    with open('customers.csv', 'a') as f:
-        w = csv.writer(f, dialect='excel')
-        for record in result:
-            w.writerow(record)
-'''
 # List Customers
 def search_customer():
     search_customers=Tk()
@@ -164,6 +157,7 @@ def search_customer():
         price_paid_label = Label(search_customers, text="Price Paid").grid(row=index+13, column=0, sticky=W, padx=10)
         id_label = Label(search_customers, text="User ID").grid(row=index+14, column=0, sticky=W, padx=10)
 
+        
         # Create Entry Boxes
         global first_name_box2
         first_name_box2 = Entry(search_customers)
@@ -238,7 +232,6 @@ def search_customer():
         save_record = Button(search_customers, text="Update Records", command =update)
         save_record.grid(row=index+15, column=0, padx=10)
 
-
     def seach_now():
 
         selected = drop.get()
@@ -281,6 +274,7 @@ def search_customer():
             csv_button = Button(search_customers, text="Save to Excel", command = lambda: write_to_csv(result))
             csv_button.grid(row=index+1, column=0)
 
+
     #Entry box search for customers
     search_box = Entry(search_customers)
     search_box.grid(row=0, column=1, padx=10, pady=10)
@@ -298,28 +292,6 @@ def search_customer():
     drop.current(0)
     drop.grid(row=0, column=2)
 
-
-# List Customers
-'''def list_customer():
-    list_customer_query =Tk()
-    list_customer_query.title("List All Customers")
-    list_customer_query.iconbitmap('icons/db.ico')
-    list_customer_query.geometry("800x600") 
-
-    # Query the Database
-    my_cursor.execute("SELECT * FROM customers")
-    result = my_cursor.fetchall()
-    
-    for index, x in enumerate(result):
-        num = 0
-        for y in x:
-            lookup_label = Label(list_customer_query, text=y)
-            lookup_label.grid(row=index, column=num)
-            num +=1
-
-    csv_button = Button(list_customer_query, text="Save to Excel", command = lambda: write_to_csv(result))
-    csv_button.grid(row=index+1, column=0)
-'''
 #create label
 title_label = Label (root, text="MariaDb customer database", font=("Helvetica", 16))
 title_label.grid(row=0, column=0, columnspan=2, pady="10")
@@ -365,7 +337,6 @@ price_paid_box = Entry(root)
 price_paid_box.grid(row=13, column=1, pady=5)
 
 # Create Buttons
-
 add_customers_button = Button(root, text= "Add customer To Database", command=add_customer)
 add_customers_button.grid(row=14, column=0, padx=10, pady=10)
 
@@ -379,5 +350,7 @@ list_customer_button.grid(row=15, column=0, sticky=W, padx=10)
 # Search Customers
 search_customers_button = Button(root, text="Save/Edit Customers", command = search_customer)
 search_customers_button.grid(row=15, column=1, sticky=W, padx=10)
+
+
 
 root.mainloop()
