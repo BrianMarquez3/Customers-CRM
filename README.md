@@ -18,6 +18,7 @@
 
 ## List All Customers
 _Add Customers_
+
 ```
 def add_customer():
     sql_command = "INSERT INTO customers(first_name, last_name, address_1, address_2, city, state, zipcade, country, phone, email, payment_method, dicount_code, price_paid) Values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
@@ -26,8 +27,7 @@ def add_customer():
 
     mydb.commit()
     clear_fields()
-'''
-
+```
 
 ![python](./images/cmr2.png)
 
