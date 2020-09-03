@@ -16,8 +16,10 @@
   
 ![python](./images/cmr.png)
 
-### Database Mariadb
-![python](./images/cmr.png)
+## Database Mariadb
+
+![python](./images/mariadb.png)
+Puerto : 3307
 
 ## Comandos 🧑‍💻
 
