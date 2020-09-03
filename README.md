@@ -1,5 +1,5 @@
 
-<h2 align="center">Customers - CMR - Basic &nbsp;🖥🖱&nbsp;</h2>
+<h2 align="center">Customers CMR - Basic &nbsp;🖥🖱&nbsp;</h2>
 
 <p align="center">
   
@@ -16,17 +16,9 @@
   
 ![python](./images/cmr.png)
 
+### Database Mariadb
+![python](./images/cmr.png)
 
-
-### Ejemplos
-```
->>> 2 + 3
-5
-```
-
-```
-print("Hello, World!")
-```
 ## Comandos 🧑‍💻
 
 _Verifica la versión de Python_
