@@ -14,7 +14,7 @@
   </a> 
 </p>
   
-![python](./images/cmr.PNG)
+![python](./images/cmr.png)
 
 
 
