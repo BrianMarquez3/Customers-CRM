@@ -16,7 +16,6 @@
   
 ![python](./images/cmr.png)
 
-## List All Customers
 _Add Customers_
 
 ```
@@ -28,6 +27,8 @@ def add_customer():
     mydb.commit()
     clear_fields()
 ```
+
+## List All Customers
 
 ![python](./images/cmr2.png)
 
